@@ -1,0 +1,24 @@
+
+
+
+<div class="container center">
+
+  <div class="center text-center status">{{(status$ | async) ? "Trancado": "Destrancado"}}</div>
+ 
+
+    <div class="row ">
+        <div class="center">
+            <button class="btn btn-light width-50 btn-custom center" (click)="trancar()">Trancar</button>
+            <button class="btn btn-light width-50 btn-custom center" (click)="destrancar()">Destrancar</button>
+            <button class="btn btn-light width-50 btn-custom center" (click)="localizar()">Localizar</button>
+        </div>
+    </div>
+
+    <div class="localizacao">
+        <div id="map_canvas" style="width:100%; height:100%"></div>
+    </div>
+
+    <agm-map [latitude]="lat" [zoom]="zoom" [longitude]="lng">
+        <agm-marker  [latitude]="lat" [longitude]="lng"></agm-marker>
+    </agm-map>
+</div>

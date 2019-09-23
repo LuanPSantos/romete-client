@@ -1,0 +1,25 @@
+
+<div class="limiter">
+	<div class="container-login100">
+		<div class="wrap-login100 p-b-160 p-t-50">
+			<form class="login100-form validate-form">
+				<div class="wrap-input100 rs1 validate-input center" data-validate = "Username is required">
+					<span class="label-input100">Username</span>
+					<input class="form-control" type="text" name="username" placeholder="Username" [ngModel]="login">
+				</div>
+				
+				
+				<div class="wrap-input100 rs2 validate-input center" data-validate="Password is required">
+					<span class="label-input100">Password</span>
+					<input class="form-control" type="password" name="pass" placeholder="Password" [ngModel]="password">
+				</div>
+
+				<div class="center button-sign">
+					<button class="btn btn-light center" (click)="signin()">
+						Sign in
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
